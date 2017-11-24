@@ -1,0 +1,31 @@
+<table class="table table-border">
+    <thead class="alert-success">
+        <tr>
+            <th>Sap ID</th>
+            <th>Host Name</th>
+            <th>Loopback</th>
+            <th>Mac Address</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tbody>
+            {% for router in routers%}
+            <tr>
+                <td>{{router.sapid}}</td>
+                <td>{{router.host_name}}</td>
+                <td>{{router.loopback}}</td>
+                <td>{{router.mac_address}}</td>
+                <td>{{router.active}}</td>
+                <td>
+                    {% if router %}
+                    <center>
+                        <a class="btn-sm btn-warning edit" name="{{router.id}}">Edit</a>
+                        <a class="btn-sm btn-danger delete" name="{{router.id}}">Delete</a>
+                    </center>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </thead>
+</table>

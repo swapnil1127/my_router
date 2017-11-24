@@ -1,0 +1,36 @@
+{% load static %}
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+<script src='{% static "jquery-3.2.1.min.js" %}'></script>
+<script src='{% static "create.js" %}'></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Router Properties</title>
+</head>
+<body>
+<h4><center><b>Router Properties</b></center></h4>
+<form class="form-link" style="margin-top:50px;">
+    {% csrf_token%}
+    <div class="form-group">
+        <lable>Sap Id</lable>
+        <input style="width:40%" type="text" class="sapid" id="sapid" required="required"><br><br>
+        <label>Host Name</label>
+        <input style="width:40%" type="text" class="host-name" id="host-name" required="required"><br><br>
+        <label>Loop Back</label>
+        <input style="width:40%" type="text" class="loop-back" id="loop-back" required="required"><br><br>
+        <label>Mac Address</label>
+        <input style="width:40%" type="text" class="mac-address" id="mac-address" required="required"><br>
+        <button type="button" style="margin-left:100px;" id="create" class="btn btn-sm">Create</button>
+    </div>
+</form>
+
+<div id="result">
+
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</html>
